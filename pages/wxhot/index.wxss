@@ -1,0 +1,68 @@
+.index-swiper {
+  position: relative;
+  height: 450rpx;
+  overflow: hidden;
+}
+swiper image {
+  display: block;
+  width: 100%;
+}
+
+.loadmore {
+    border: 0px solid #ffffff;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0px 5px 1px #cccccc;
+    margin: 8px;
+}
+
+.main-list-header .title,
+.main-list-header .date {
+  display: inline-block;
+  color: #FFF;
+  font-size: 30rpx;
+  padding: 25rpx;
+}
+.main-list-header .title {
+  background: #20B4F0;
+}
+.main-list-header .date {
+  background: #019DD6;
+}
+
+.page_list {
+    height:100%;
+    width:100%;
+    display: block;
+}
+/*common list*/
+.common-list .list-item {
+  position: relative;
+  border-bottom: 1px solid #EEE;
+  padding: 20rpx;
+  min-height: 150rpx;
+  overflow: hidden;
+}
+.common-list .list-item:active {
+ 	background: #FAFAFA;
+}
+.common-list .list-item.has-img image.cover {
+  position: absolute;
+  left: 20rpx;
+  top: 20rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+.common-list .list-item.has-img .content {
+  margin-left: 180rpx;
+}
+.common-list .list-item .content text {
+  font-size: 35rpx;
+}
+
+.common-list .list-spliter {
+  font-size: 30rpx;
+  background: #EEE;
+  padding: 20rpx;
+  color: #555
+}

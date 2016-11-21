@@ -1,0 +1,22 @@
+<view class="container">  
+  <view class="top">
+    <view>{{weather.basic.cnty}}</view>
+    <view>{{weather.basic.city}}</view>
+    <view>{{weather.basic.update.loc}} 更新</view>
+  </view>
+  <view class="topRegion">
+    <view id="temperature" >{{weather.now.tmp}}℃</view>
+    <view id="summary" >{{weather.now.wind.dir}} {{weather.now.wind.sc}}</view>
+  </view>
+  <view class="summary" >
+    <view>{{weather.now.cond.txt}}</view>
+    <view style="margin-top:20rpx">能见度:{{weather.now.vis}} 相对湿度:{{weather.now.hum}}</view>
+  </view>
+  <view class="daily" >
+    <view class="daily_item" wx:for="{{weather.daily_forecast}}">
+      <view class="daily_weekday" >{{item.date}}</view>
+      <view class="daily_temperature" >{{item.tmp.min}}-{{item.tmp.max}}℃ </view>      
+      <view class="daily_summary" >{{item.wind.dir}} 风力:{{item.wind.sc}}</view>
+    </view>
+  </view>
+</view>

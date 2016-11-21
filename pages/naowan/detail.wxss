@@ -1,0 +1,51 @@
+
+.toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100rpx;
+    border-top: 1px solid #DDD;
+    background: #FFF
+}
+.toolbar .inner {
+    padding: 0 20rpx;
+}
+.toolbar .item {
+    position: relative;
+    padding-top: 20rpx;
+    text-align: center;
+    width: 20%;
+    display: inline-block;
+}
+.toolbar .item .tip {
+    position: absolute;
+    display: block;
+    top: 20rpx;
+    right: 50%;
+    margin-right: -30rpx;
+    background: #019DD6;
+    color: #FFF;
+    width: 20rpx;
+    height: 20rpx;
+    border-radius: 20rpx;
+}
+.toolbar .item:active {
+    background: #FAFAFA;
+}
+.toolbar .item image {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+
+
+.share-list .item {
+  display: inline-block;
+  width: 33.33333%;
+  text-align: center;
+}
+.share-list .item image {
+  width: 120rpx;
+  height: 120rpx;
+}

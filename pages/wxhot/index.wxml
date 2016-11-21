@@ -1,0 +1,32 @@
+<!--index.wxml-->
+<loading hidden="{{hidden}}" >
+    加载中...
+</loading>
+<scroll-view class="page_list" scroll-y="true" lower-threshold='1' upper-threshold='0' bindscrolltoupper="scrollupper" bindscrolltolower="scrolllower">
+    <swiper class="index-swiper" indicator-dots="true" vertical="false"
+            autoplay="true" interval="5000" duration="1000" bindchange="swiperchange">
+        <block wx:for-items="{{swipermeinv}}">
+            <swiper-item data-url="{{item.picUrl}}" bindtap = "onItemClick">
+                <image src="{{item.picUrl}}" mode="aspectFill"/>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <view class="main-list-header">
+        <view class="title"><text>微信热门资讯</text></view>
+        <view class="date"><text>{{currentDateStr}}</text></view>
+    </view>
+    <view class="common-list">
+        <block wx:for-items="{{listwxhot}}">
+            <view class="list-item has-img">
+                <view class="content">
+                    <text>{{item.title}}</text>
+                </view>
+                <image src="{{item.picUrl}}" class="cover"></image>
+            </view>
+        </block>
+        <button hidden="{{loadmorehidden}}" type="primary" class="loadmore" size="default" loading="{{loading}}" plain="{{plain}}" bindtap="loadMore"> 
+            点击加载更多 
+        </button>
+    </view>
+</scroll-view>

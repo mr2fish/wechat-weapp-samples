@@ -1,0 +1,17 @@
+/**app.wxss**/
+page {
+  position: relative;
+  height: 100%;
+}
+.flex-wrap{
+	display: flex;
+}
+.flex-item{
+	flex: 1;
+}
+.flex-wrap.flex-direction-col{
+	flex-direction: column;
+}
+.flex-wrap.flex-direction-row{
+	flex-direction: row;
+}

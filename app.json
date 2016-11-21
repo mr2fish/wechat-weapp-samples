@@ -1,0 +1,51 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/splash/index",
+    "pages/nuomi/index",
+    "pages/my/index",
+    "pages/setting/index",
+    "pages/naowan/index",
+    "pages/naowan/detail",
+    "pages/wxhot/index",
+    "pages/wxhot/meinv",
+    "pages/airquality/index",
+    "pages/airquality/result",
+    "pages/weather/index",
+    "pages/cutcount/index",
+    "pages/timer/index",
+    "pages/location/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundColor":"#f4f4f4",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "orange",
+    "navigationBarTitleText": "小程序小实例",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "selectedColor":"#a00",
+    "list":[{
+      "pagePath":"pages/index/index",
+      "iconPath": "resources/images/32x32/home.png",
+      "selectedIconPath": "resources/images/32x32/home_on.png",
+      "text":"首页"
+    },{
+      "pagePath":"pages/nuomi/index",
+      "iconPath": "resources/images/32x32/classify.png",
+      "selectedIconPath": "resources/images/32x32/classify_on.png",
+      "text":"分类"
+    },{
+      "pagePath":"pages/logs/logs",
+      "iconPath": "resources/images/32x32/log.png",
+      "selectedIconPath": "resources/images/32x32/log_on.png",
+      "text":"日志"
+    },{
+      "pagePath":"pages/my/index",
+      "iconPath": "resources/images/32x32/my.png",
+      "selectedIconPath": "resources/images/32x32/my_on.png",
+      "text":"我的"
+    }]
+  }
+}

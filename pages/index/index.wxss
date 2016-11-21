@@ -1,0 +1,269 @@
+/**index.wxss**/
+.menu-scroll{
+  white-space: nowrap; 
+  display: flex;
+  background: rgba(0, 0, 0, .3);
+}
+.menu-scroll view{
+  display: inline-block;
+  padding: 20rpx;
+}
+.menu-active{
+    color: #fff;
+    border-bottom: #fff027 solid 1px;
+}
+
+
+.index-swiper{
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.index-swiper .mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, .3)
+}
+.index-swiper .desc {
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 20rpx 20rpx 50rpx 20rpx;
+  background: rgba(0, 0, 0, .3);
+  color: #FFF;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis;
+}
+
+
+.nav-image-text{
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 10rpx;
+  margin-bottom: 0rpx;
+  min-height: 350rpx;
+  overflow: hidden;
+}
+.nav-image-text-item{
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 25%;
+  height: 175rpx;
+}
+.nav-image-text-icon{
+  display: block;
+  width: 85rpx;
+  height: 85rpx;
+  /*margin: 15rpx auto;*/
+}
+.nav-image-text-name{
+  display: block;
+  margin: 10rpx;
+}
+
+
+
+
+
+.wrap{
+	display: inline-block;
+	margin-top: 0rem;
+}
+.wrap-item{
+	display: inline-block;
+	width: 33%;
+	height: 6rem;
+	line-height: 6rem;
+	border-bottom: 1px solid #ddd;
+	background-color: #fff;
+	text-align: center;
+}
+ /*不支持 :nth-child(2);*/
+.wrap-item.exp{
+	border: 1px solid #ddd;
+	border-top: 0;
+}
+
+
+.col3{
+    display: flex;
+    flex-direction: column;
+    margin: 20rpx 0;
+    clear: both;
+}
+
+.col3-h{
+    border-bottom: #eee dotted 1px;
+    padding: 10rpx;
+    font-size: 16px;
+}
+
+.col3-img{
+    display: inline-block;
+    margin: 0 1px;
+}
+
+.c3-actual-img{
+    width: 130px;
+    height: 180px;
+}
+
+.col3-img-list{
+    width: 100%;
+    white-space: nowrap;
+    margin: 2rpx;
+}
+
+
+
+.line_flag {
+  width: 5px;
+  height: 15px;
+  display: inline-block;
+  margin-top: .8rem;
+  margin-inline-start: .8rem;
+  background-color: #f9f027;
+}
+/*====*/
+view.text text {
+    margin-left: 10px;
+    line-height: 18px;
+    font-weight: bold;
+}
+
+.venues_box {
+    padding: 0 10rpx;
+}
+.venues_item {
+    display: inline-block;
+    width: 49%;
+    margin: 0 0.5%;
+}
+.venues_item image{
+    width: 100%;
+    height: 90px;
+}
+
+
+.photo-list{
+  width:100%;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.photo-item {
+  display: flex;
+  flex-direction: row;
+  padding:2rpx 0rpx;
+}
+.photo-item image{
+  width:373rpx;
+  height:373rpx;
+  background: #ffffff;
+}
+
+
+/*slide-menu*/
+.slide-mask {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, .3);
+  z-index: 800;
+}
+.slide-menu {
+  position: fixed;
+  top: 0;
+  background: #FFF;
+  z-index: 900;
+}
+.slide-menu .header {
+  background: #019DD6;
+  height: 200rpx;
+  color: #FFF;
+  padding: 20rpx 40rpx 0 40rpx;
+}
+
+.userinfo {
+  height: 80rpx;
+  line-height: 80rpx;
+  overflow: hidden;
+}
+.userinfo .avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 40rpx;
+  float: left;
+}
+.userinfo text {
+  float: left;
+  font-size: 35rpx;
+}
+.toolbar {
+  height: 100rpx;
+  padding-top: 25rpx;
+  line-height: 75rpx;
+}
+.toolbar .item {
+  width: 50%;
+  display: inline-block;
+  overflow: hidden;
+  text-align: center
+}
+.toolbar .item text {
+  display: inline-block;
+  font-size: 30rpx
+}
+.toolbar .item image {
+  display: inline-block;
+  position: relative;
+  top: 10rpx;
+  margin-right: 10rpx;
+  height: 50rpx;
+  width: 50rpx;
+}
+
+.slide-menu .menu-item {
+  position: relative;
+  height: 100rpx;
+  line-height: 100rpx;
+  padding: 0 40rpx;
+  font-size: 35rpx;
+}
+.slide-menu .menu-item:active {
+  background: #FAFAFA;
+}
+.slide-menu .menu-item image {
+  position: absolute;
+  top: 25rpx;
+  right: 40rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.slide-menu .home {
+  color: #019DD6
+}
+
+.slide-menu .close-btn {
+  position: absolute;
+  top: 20rpx;
+  right: 40rpx;
+  z-index: 1000
+}

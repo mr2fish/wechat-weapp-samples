@@ -1,0 +1,14 @@
+<template name="venues-box">
+  <view class="text">
+        <view class="line_flag"></view>
+        <text>名胜古迹</text>
+    </view>
+    <view class="venues_list">
+        <block wx:for="{{venuesItems}}">
+            <view class="venues_item">
+                <image src="{{item.imgurl}}"/>
+                <!--<view class="title">{{item.title}}</view>-->
+            </view>
+        </block>
+    </view>
+</template>

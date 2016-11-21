@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<block wx:for="{{listnaowan}}">
+    <navigator url="detail?title={{item.result}}">
+        <view>
+            <view><text class="news-title">{{item.quest}}</text></view>
+            <view><text class="news-stamp">{{item.result}}</text></view>
+        </view>
+    </navigator>
+</block>
+<view>
+    <button bindtap="bindReload">refresh</button>
+</view>
+
+

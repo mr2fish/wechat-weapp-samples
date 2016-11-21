@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="nav_left">
+    <block wx:for="{{navLeftItems}}">
+      <view class="nav_left_items {{curNav == item.cat_id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.cat_id}}">
+        {{item.cat_name}}
+      </view>
+    </block>
+  </view>
+  <view class="nav_right">
+    <view wx:if="{{navRightItems[curIndex].subcategories}}">
+        <view wx:for="{{navRightItems[curIndex].subcategories}}" class="nav_right_items">
+          <view>
+            <image wx:if="{{item.subcat_id%3==0}}" src="http://placehold.it/50x30"></image>
+            <image wx:else src="http://temp.im/50x30"></image>
+          </view>
+          <text>{{item.subcat_name}}</text>
+        </view>
+    </view>
+    <view wx:else>暂无数据</view>
+  </view>
+</view>

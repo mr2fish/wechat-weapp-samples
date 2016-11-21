@@ -1,0 +1,8 @@
+<view >
+    <loading hidden="{{hidden}}" >{{loadingText}}</loading>
+
+    <view bindlongtap = "onlongclick" data-url="{{url}}">
+        <image class = "bigImage" mode="aspectFill" src="{{url}}" data-src="{{url}}" bindtap="previewImgEvent"/>
+    </view>
+
+</view>

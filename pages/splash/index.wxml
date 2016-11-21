@@ -1,0 +1,6 @@
+<image src="http://img02.tooopen.com/images/20160520/tooopen_sy_162965871418.jpg" class="cover" style="height:{{screenHeight}}px;width:{{screenWidth}}px"></image>
+<view class="mask">
+    <image class="logo" src="../../resources/images/wechat_on.png"></image>
+    <text class="cover-author">wechat-weapp-samples</text>
+    <text class="app-author">Designed by sobne</text>
+</view>

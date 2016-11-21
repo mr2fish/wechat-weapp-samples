@@ -1,0 +1,123 @@
+<!--index.wxml-->
+<scroll-view class="menu-scroll" scroll-x="true">
+  <view data-menu="beijing" bindtap = "bindMenu" class="{{activemenu=='beijing'? 'menu-active':''}}">北京</view>
+  <view data-menu="shanghai" bindtap = "bindMenu" class="{{activemenu=='shanghai'? 'menu-active':''}}">上海</view>
+  <view data-menu="guangzhou" bindtap = "bindMenu" class="{{activemenu=='guangzhou'? 'menu-active':''}}">广州</view>
+  <view data-menu="shenzhen" bindtap = "bindMenu" class="{{activemenu=='shenzhen'? 'menu-active':''}}">深圳</view>
+  <view data-menu="tianjin" bindtap = "bindMenu" class="{{activemenu=='tianjin'? 'menu-active':''}}">天津</view>
+  <view data-menu="chengdu" bindtap = "bindMenu" class="{{activemenu=='chengdu'? 'menu-active':''}}">成都</view>
+  <view data-menu="suzhou" bindtap = "bindMenu" class="{{activemenu=='suzhou'? 'menu-active':''}}">苏州</view>
+  <view data-menu="hangzhou" bindtap = "bindMenu" class="{{activemenu=='hangzhou'? 'menu-active':''}}">杭州</view>
+  <view data-menu="chongqing" bindtap = "bindMenu" class="{{activemenu=='chongqing'? 'menu-active':''}}">重庆</view>
+  <view data-menu="wuhan" bindtap = "bindMenu" class="{{activemenu=='wuhan'? 'menu-active':''}}">武汉</view>
+</scroll-view>
+<swiper class="index-swiper"
+  indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{swipers}}">
+    <swiper-item>
+        <image mode="aspectFill" src="{{item.image}}"/>
+        <view class="mask"></view>
+        <view class="desc"><text>{{item.title}}</text></view>
+    </swiper-item>
+  </block>
+</swiper>
+
+<view class="nav-image-text">
+    <block wx:for="{{navItems}}">
+      <navigator class="nav-image-text-item" url="/pages/{{item.id}}/index">
+        <image class="nav-image-text-icon" src="{{item.icon}}" />
+        <text class="nav-image-text-name">{{item.name}}</text>
+      </navigator>
+    </block>
+</view>
+
+
+<view class="flex-wrap flex-direction-col">
+  <view class="flex-wrap flex-direction-col wrap">
+    <block wx:for="{{navItems}}" wx:for-index="idx"> 
+      <view class="wrap-item {{idx%3==1 ? 'exp' : ''}}">  
+        <block wx:if="{{item.id=='0'}}">
+            <text bindtap="slideOpen">{{item.name}}</text>
+        </block>
+        <block wx:else>
+            <navigator url="../{{item.id}}/index" hover-class="navigator-hover">{{item.name}}</navigator>
+        </block>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+<view class="col3">
+    <view class="col3-h">
+      <text>横向滚动</text>
+      <icon type="search" size="16" style="float:right;"></icon>
+    </view>
+    <scroll-view scroll-x="true" class="col3-img-list">
+        <view class="col3-img">
+            <image class="c3-actual-img" mode="scaleToFill" src="http://img06.tooopen.com/images/20160713/tooopen_sy_170262475385.jpg"></image>
+        </view>
+        <view class="col3-img">
+            <image class="c3-actual-img" mode="scaleToFill" src="http://img06.tooopen.com/images/20160811/tooopen_sy_175175629366.jpg"></image>
+        </view>
+        <view class="col3-img">
+            <image class="c3-actual-img" mode="scaleToFill" src="http://img02.tooopen.com/images/20160411/tooopen_sy_158988747418.jpg"></image>
+        </view>
+        <view class="col3-img">
+            <image class="c3-actual-img" mode="scaleToFill" src="http://img02.tooopen.com/images/20160329/tooopen_sy_157646855878.jpg"></image>
+        </view>
+    </scroll-view>
+</view>
+
+
+<import src="../../template/venues-box.wxml"/>
+<template is="venues-box" data="{{venuesItems}}"></template>
+
+<view class="photo-list">
+    <block wx:for="{{venuesItems}}">
+        <view class="photo-item">
+            <image src="{{item.imgurl}}"></image>
+        </view>
+    </block>
+</view>
+
+
+<view class="slide-mask" style="display:{{slideMaskDisplay}}" bindtap="slideClose"></view>
+<view class="slide-menu" style="right: {{slideWindow.slideRight}}px;width: {{slideWindow.slideWidth}}px;height:{{slideWindow.slideHeight}}px;" animation="{{slideAnimation}}">
+  <icon type="cancel" size="30" class="close-btn" color="#FFF" bindtap="slideClose" />
+  <scroll-view scroll-y="true" style="height:100%;width:100%">
+    <view class="header">
+      <navigator url="../my/index">
+        <view class="userinfo">
+          <image src="{{userInfo.avatarUrl}}" class="avatar"></image>
+          <text>sobne</text>
+        </view>
+      </navigator>
+      <view class="toolbar">
+        <view class="item">
+          <image src="../../resources/images/16x16/logout.png"></image>
+          <text>登出</text>
+        </view>
+        <view class="item" bindtap = "bindSlideSetting">
+          <image src="../../resources/images/16x16/setting.png"></image>
+          <text>设置</text>
+        </view>
+      </view>
+    </view>
+    <view class="menu-item home">
+      <text>常用</text>
+    </view>
+    <view class="slide-inner">
+      <block wx:for="{{slideMenus}}">
+        <view class="menu-item">
+          <text>{{item.name}}</text>
+          <image src="../../resources/images/32x32/arrow_right.png"></image>
+        </view>
+      </block>
+    </view>    
+  </scroll-view>
+</view>
+
+<loading hidden="{{!loading}}">
+    loading...
+</loading>
