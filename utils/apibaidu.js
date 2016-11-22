@@ -1,4 +1,4 @@
-const API_KEY="acc3260ffe08c72d69bc79cb3111ccca";
+const API_KEY="******";
 const AIR_QUALITY_URL="http://apis.baidu.com/apistore/aqiservice/aqi";
 const WXHOT_URL="http://apis.baidu.com/txapi/weixin/wxhot";
 const MEINV_URL="http://apis.baidu.com/txapi/mvtp/meinv";
